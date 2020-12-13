@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
+//フォント設定
+$en-font: "Oswald", "Noto Sans JP", sans-serif;
+$sidebar-item-font-size: 1.4rem;
+
+@mixin home-section-ttl() {
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
+  font-size: 4.8rem;
+  letter-spacing: 0.12em;
+	line-height: 1.5;
+
+	@media screen and (max-width:767px){
+		font-size: 3.4rem;
+	}
+}
+@mixin home-section-ttl-sub() {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+}
+
+// カラー設定
+$main-color: #333;
+$main-color-rgba: rgba(51, 51, 51, 0.98);
+$sub-color: #c4b495;
+$sub-color-rgba: rgba(196, 180, 149, 0.98);
+$thd-color: #bbaa80;
+$thin-color: #f7f3eb;
+$excerpt-color: #777;
+
+//ボーダー設定
+$list-border: 1px solid #ccc;
+
+//シャドウ設定
+$swiper-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+$article-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+$article-box-shadow-hover: 0 0 30px 0 rgba(0, 0, 0, 0.2);

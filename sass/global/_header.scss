@@ -1,0 +1,217 @@
+.p-header {
+  height: 100px;
+  color: #ffffff;
+  background: $main-color;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+
+  @media screen and (max-width: 1024px) {
+    height: 60px;
+    padding-left: 0;
+  }
+  &-logo {
+    width: 165px;
+
+    @media screen and (max-width: 1024px) {
+      width: 145px;
+      margin-left: 20px;
+    }
+
+    &-link {
+      display: block;
+      color: #fff;
+    }
+
+    &-img {
+      max-height: 80px;
+
+      @media screen and (max-width: 1024px) {
+        max-height: 55px;
+      }
+    }
+  }
+  &-contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    &-link {
+      font-family: $en-font;
+      font-size: 1.6rem;
+      color: #fff;
+      letter-spacing: 0.15em;
+      width: 144px;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $sub-color;
+      padding: 20px 0;
+      transition: 0.3s;
+
+      &:hover {
+        filter: brightness(1.12);
+      }
+    }
+
+    &-icon {
+      font-size: 3rem;
+    }
+  }
+}
+
+.p-gnav {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &-list {
+    display: flex;
+    margin-right: 160px;
+  }
+
+  &-item {
+    padding: 32px 0;
+  }
+
+  &-link {
+    font-family: $en-font;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    height: 100%;
+    padding: 30px 15px;
+    transition: 0.3s;
+
+    &:hover,
+    &.is-current {
+      color: $sub-color;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $sub-color;
+    }
+  }
+}
+
+//ハンバーガーメニュー
+.p-hum {
+  display: none;
+  position: absolute;
+  height: 20px;
+  right: 15px;
+  top: 20px;
+  width: 30px;
+  background: transparent;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+
+  &-wrap {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    background-color: $main-color;
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+
+    &.js-open {
+      background-color: transparent;
+      transition: 0.1s;
+    }
+  }
+
+  &-line {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: transform 0.3s;
+    width: 100%;
+
+    &-top {
+      top: 0;
+
+      &.js-open {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+    }
+
+    &-center {
+      top: 9px;
+      bottom: 0;
+
+      &.js-open {
+        transform: scaleX(0);
+      }
+    }
+
+    &-bottom {
+      bottom: 0;
+
+      &.js-open {
+        bottom: 10px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+
+  &-gnav {
+    background: $main-color-rgba;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    overflow: scroll;
+
+    &-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    &-item {
+      padding: 30px;
+      text-align: center;
+
+      @media screen and (max-width: 1024px) {
+        padding: 10px;
+      }
+    }
+
+    &-link {
+      font-family: $en-font;
+      font-size: 2rem;
+      color: #ffffff;
+      transition: 0.5s;
+			padding: 10px;
+
+			&.is-current {
+				color: $sub-color;
+			}
+
+      &:hover {
+        color: $sub-color;
+      }
+    }
+  }
+}

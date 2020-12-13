@@ -1,0 +1,97 @@
+
+body {
+	font: normal normal normal 1.6em/2
+	'Lato', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+	letter-spacing: 0.09em;
+	@media screen and (max-width:767px){
+		line-height: 1.9;
+		overflow-x: hidden;
+	}
+}
+
+body::before {
+  display: block;
+  padding: 100px 0 0;
+  content: "";
+
+  @media screen and (max-width: 1024px) {
+    padding: 60px 0 0;
+  }
+}
+
+.l-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.l-main {
+  position: relative;
+}
+
+.l-blog {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    padding: 60px 20px;
+  }
+
+  &-main {
+    width: 68%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &-aside {
+    width: 25%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+.l-blog-single {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    padding: 60px 20px;
+  }
+  &-main {
+    &-wrap {
+      width: 70%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.l-footer {
+  width: 100%;
+  background: $main-color;
+
+  @media screen and (max-width: 767px) {
+    padding: 0px 0 20px;
+
+    & > *:not(:last-child) {
+      padding: 20px 0;
+    }
+  }
+}
